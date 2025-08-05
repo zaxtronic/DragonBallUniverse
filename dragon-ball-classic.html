@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Dragon Ball - Dragon Ball Universe</title>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ========================================================== */
+        /* === ESTILOS MEJORADOS PARA LA PÁGINA DE DETALLES (V2.2) === */
+        /* ========================================================== */
+
+        /* --- (Las secciones 1 y 2 no cambian) --- */
+        .serie-detalle-header {
+            min-height: 45vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 5%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .serie-detalle-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, var(--color-fondo) 5%, transparent 95%);
+        }
+        .serie-detalle-header h2 {
+            position: relative;
+            z-index: 2;
+            font-size: clamp(3.5rem, 13vw, 7rem);
+            text-align: center;
+            margin: 0;
+            color: white;
+            text-shadow: 0 5px 20px black;
+        }
+        .serie-info-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-top: 2rem;
+            padding: 0 5%;
+        }
+        .serie-poster {
+            text-align: center;
+            flex-shrink: 0;
+        }
+        .serie-poster img {
+            width: 100%;
+            max-width: 320px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 3px solid var(--color-superficie);
+        }
+        .serie-descripcion {
+            background-color: var(--color-superficie);
+            padding: 30px;
+            border-radius: 12px;
+            flex-grow: 1;
+        }
+        .serie-descripcion h3 {
+            margin-top: 0;
+            color: var(--color-primario);
+            font-family: var(--fuente-titulo-impacto);
+            text-align: left;
+            font-size: 2.2rem;
+            border-bottom: 2px solid var(--color-primario);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .serie-descripcion p {
+            line-height: 1.7;
+            font-size: 1.1rem;
+            color: var(--color-texto-secundario);
+        }
+
+        /* --- 3. LISTA DE SAGAS CON IMÁGENES MÁS GRANDES --- */
+        .sagas-container {
+            padding: 0 5%;
+            margin-top: 3rem;
+        }
+        .sagas-container h3 {
+             font-family: var(--fuente-titulo-impacto);
+             font-size: 2.5rem;
+             color: var(--color-texto);
+             margin-bottom: 2rem;
+             text-align: center;
+        }
+
+        .saga-item {
+            display: flex;
+            align-items: center;
+            /* AJUSTE 1: Más espacio para que no se vea apretado */
+            gap: 25px; /* Antes era 20px */
+            padding: 20px 25px; /* Antes era 15px 25px */
+            background-color: var(--color-superficie);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            border-left: 5px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .saga-image {
+             /* AJUSTE 2: Aumentamos el tamaño de la imagen */
+            width: 120px;  /* Antes era 80px */
+            height: 68px; /* Antes era 45px (para mantener la proporción 16:9) */
+            object-fit: cover;
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+        
+        .saga-item:hover {
+            background-color: hsl(212, 33%, 20%);
+            border-left: 5px solid var(--color-primario);
+            color: white;
+            transform: translateX(10px);
+            cursor: pointer;
+        }
+
+        @media (min-width: 992px) {
+            .serie-info-container {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+             .serie-poster {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dragon Ball Universe</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="anime.html">Anime</a></li>
+                <li><a href="peliculas.html">Películas</a></li>
+                <li><a href="extras.html">Extras</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="serie-detalle-header" style="background-image: url('https://m.media-amazon.com/images/S/pv-target-images/ba2044576c78df97b62c9f9ffb77511bf368d85d5acef4911a0cebf30f68544e.jpg');">
+            <h2>Dragon Ball</h2>
+        </section>
+
+        <div class="serie-info-container">
+            <div class="serie-poster">
+                <img src="https://pics.filmaffinity.com/Dragon_Ball_Bola_de_Dragaon_Serie_de_TV-973171538-large.jpg" alt="Poster de Dragon Ball">
+            </div>
+            <div class="serie-descripcion">
+                <h3>Sinopsis</h3>
+                <p>
+                    La historia comienza con un pequeño niño con cola llamado Goku, que vive solo en las montañas. Un día conoce a Bulma, una joven brillante que busca las siete Esferas del Dragón. Juntos, se embarcan en una increíble aventura llena de acción, comedia y artes marciales para encontrar las esferas que, al reunirlas, pueden conceder cualquier deseo.
+                </p>
+            </div>
+        </div>
+
+        <section class="sagas-container">
+            <h3>Sagas Principales</h3>
+
+            <!-- CORRECCIÓN: Se añade el enlace <a> sin tocar el contenido interior -->
+            <a href="saga-pilaf.html" class="card-link">
+                <div class="saga-item">
+                    <img class="saga-image" src="https://tiermaker.com/images/templates/personajes-de-la-saga-de-pilaf---dragon-ball-1066388/10663881623362307.png" alt="Saga de Pilaf">
+                    <span>Saga de Pilaf</span>
+                </div>
+            </a>
+
+            <!-- CORRECCIÓN: Se añade el enlace <a> sin tocar el contenido interior -->
+            <a href="saga-torneo21.html" class="card-link">
+                <div class="saga-item">
+                    <img class="saga-image" src="https://static.wikia.nocookie.net/dragonball/images/c/c4/Tournamentsagaconceptart.jpg/revision/latest?cb=20130330075455&path-prefix=es" alt="21º Torneo de Artes Marciales">
+                    <span>21º Torneo de Artes Marciales</span>
+                </div>
+            </a>
+
+            <!-- CORRECCIÓN: Se añade el enlace <a> sin tocar el contenido interior -->
+            <a href="saga-redribbon.html" class="card-link">
+                <div class="saga-item">
+                    <img class="saga-image" src="https://i.imgur.com/EtrT8vf.jpg" alt="Saga del Ejército Red Ribbon">
+                    <span>Saga del Ejército Red Ribbon</span>
+                </div>
+            </a>
+
+            <!-- CORRECCIÓN: Se añade el enlace <a> sin tocar el contenido interior -->
+            <a href="saga-torneo22.html" class="card-link">
+                <div class="saga-item">
+                    <img class="saga-image" src="https://static.wikia.nocookie.net/dragonball/images/3/37/Torneo_22_Tenkaichi_Budokai.jpg/revision/latest?cb=20201106231145&path-prefix=es" alt="22º Torneo de Artes Marciales">
+                    <span>22º Torneo de Artes Marciales</span>
+                </div>
+            </a>
+
+            <!-- CORRECCIÓN: Se añade el enlace <a> sin tocar el contenido interior -->
+            <a href="saga-piccolo.html" class="card-link">
+                <div class="saga-item">
+                    <img class="saga-image" src="https://i.pinimg.com/736x/52/98/c3/5298c31f6cfad3bcd653b4e034aa3c0c.jpg" alt="Saga de Piccolo Daimaō">
+                    <span>Saga de Piccolo Daimaō</span>
+                </div>
+            </a>
+
+            <!-- CORRECCIÓN: Se añade el enlace <a> sin tocar el contenido interior -->
+            <a href="saga-torneo23.html" class="card-link">
+                <div class="saga-item">
+                    <img class="saga-image" src="https://static.wikia.nocookie.net/dragonball/images/9/99/Arco_del_23_Tenkaichi_Budokai.png/revision/latest?cb=20220122012434&path-prefix=es" alt="23º Torneo de Artes Marciales">
+                    <span>23º Torneo de Artes Marciales</span>
+                </div>
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Dragon Ball Universe Fan Site. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

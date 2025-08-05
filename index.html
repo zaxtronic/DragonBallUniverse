@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a Dragon Ball Universe</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Estilos específicos para esta nueva página de inicio -->
+    <style>
+        .hero h2 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem); /* Ajustamos el tamaño del título del hero */
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 650px; /* Hacemos el texto un poco más ancho */
+            margin: 1rem auto 2rem;
+        }
+        .cta-button {
+            background-color: var(--color-primario);
+            color: var(--color-fondo);
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+        }
+        .cta-button:hover {
+            background-color: var(--color-acento);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* Nueva sección "Sobre el proyecto" */
+        .about-section {
+            padding: 4rem 5%;
+            text-align: center;
+        }
+        .about-section h3 {
+            font-family: var(--fuente-titulo-impacto);
+            font-size: 2.5rem;
+            color: var(--color-texto);
+            margin-bottom: 1.5rem;
+        }
+        .about-section p {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+            color: var(--color-texto-secundario);
+        }
+
+        /* Nueva sección "Qué encontrarás" */
+        .whats-inside {
+            background-color: var(--color-superficie);
+            padding: 4rem 5%;
+            text-align: center;
+        }
+        .whats-inside h3 {
+            font-family: var(--fuente-titulo-impacto);
+            font-size: 2.5rem;
+            color: var(--color-texto);
+            margin-bottom: 3rem;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .feature-box {
+            background-color: var(--color-fondo);
+            padding: 30px;
+            border-radius: 12px;
+            border: 2px solid transparent;
+            transition: border-color 0.3s ease, transform 0.3s ease;
+        }
+        .feature-box:hover {
+            transform: translateY(-10px);
+            border-color: var(--color-acento);
+        }
+        .feature-box h4 {
+            color: var(--color-primario);
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dragon Ball Universe</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="anime.html">Anime</a></li>
+                <li><a href="peliculas.html">Películas</a></li>
+                <li><a href="extras.html">Extras</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SECCIÓN HERO MODIFICADA -->
+        <section class="hero" style="background-image: url('imagenes/fondo-hero.jpg');">
+            <h2>El Santuario Definitivo para Fans de Dragon Ball</h2>
+            <p>Creado por y para fans, este es tu universo para explorar cada saga, revivir batallas épicas y celebrar el legado de la obra de Akira Toriyama.</p>
+            <a href="#about" class="cta-button">Descubre Más</a>
+        </section>
+
+        <!-- NUEVA SECCIÓN: SOBRE ESTE PROYECTO -->
+        <section class="about-section" id="about">
+            <h3>Nuestra Misión</h3>
+            <p>
+                Dragon Ball Universe nació de la pasión por una historia que ha marcado a generaciones. Nuestro objetivo es crear un espacio centralizado, ordenado y visualmente atractivo donde los fans puedan encontrar información detallada sobre todo el contenido de la franquicia. Desde la primera aventura de Goku hasta los torneos multiversales, queremos que este sea el mejor punto de encuentro para la comunidad.
+            </p>
+        </section>
+
+        <!-- NUEVA SECCIÓN: GUÍA DE CONTENIDO -->
+        <section class="whats-inside">
+            <h3>¿Qué encontrarás aquí?</h3>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <h4>Anime</h4>
+                    <p>Navega a través de todas las series de anime, desde Dragon Ball hasta Super. Accede a guías detalladas de cada saga, sus personajes y momentos clave.</p>
+                </div>
+                <div class="feature-box">
+                    <h4>Películas</h4>
+                    <p>Explora la filmografía completa, incluyendo los especiales de televisión y las últimas superproducciones. Todo organizado para tu comodidad.</p>
+                </div>
+                <div class="feature-box">
+                    <h4>Extras y Manga</h4>
+                    <p>Sumérgete en el material original de Akira Toriyama, guías de personajes, revistas y otro contenido exclusivo que todo verdadero fan apreciará.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Dragon Ball Universe Fan Site. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

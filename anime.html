@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime - Dragon Ball Universe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Dragon Ball Universe</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="anime.html">Anime</a></li>
+                <li><a href="peliculas.html">Películas</a></li>
+                <li><a href="extras.html">Extras</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="series-list">
+            <h2>Series de Anime</h2>
+
+            <!-- ENLACE ENVOLVIENDO TODO EL ELEMENTO DE DRAGON BALL -->
+            <a href="dragon-ball-classic.html" class="card-link">
+                <div class="series-item">
+                    <img src="https://pics.filmaffinity.com/Dragon_Ball_Bola_de_Dragaon_Serie_de_TV-973171538-large.jpg" alt="Dragon Ball">
+                    <div class="series-info">
+                        <h3>Dragon Ball (1986-1989)</h3>
+                        <p>La aventura original que sigue a un joven Goku en su búsqueda de las Esferas del Dragón.</p>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- ENLACE ENVOLVIENDO TODO EL ELEMENTO DE DRAGON BALL Z -->
+            <a href="dragon-ball-z.html" class="card-link">
+                <div class="series-item">
+                    <img src="https://static.wikia.nocookie.net/doblaje/images/7/7c/Dragon-Ball-Z.png/revision/latest?cb=20200911193425&path-prefix=es" alt="Dragon Ball Z">
+                    <div class="series-info">
+                        <h3>Dragon Ball Z (1989-1996)</h3>
+                        <p>Goku y los Guerreros Z defienden la Tierra de amenazas intergalácticas cada vez más poderosas.</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- ENLACE ENVOLVIENDO TODO EL ELEMENTO DE DRAGON BALL GT -->
+            <a href="dragon-ball-gt.html" class="card-link">
+                <div class="series-item">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMWQyMzQwNzQtZTgxYy00OGY0LTg0MmItZjNkNTk3NjgyYmJjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Dragon Ball GT">
+                    <div class="series-info">
+                        <h3>Dragon Ball GT (1996-1997)</h3>
+                        <p>Una secuela original del anime que lleva a Goku a una nueva aventura por el espacio.</p>
+                    </div>
+                </div>
+            </a>
+
+             <!-- ENLACE ENVOLVIENDO TODO EL ELEMENTO DE DRAGON BALL SUPER -->
+            <a href="dragon-ball-super.html" class="card-link">
+                <div class="series-item">
+                    <img src="https://m.media-amazon.com/images/M/MV5BYTgyMzA5MjEtNDY3Ny00ZDkyLWJhYzEtYzI2Nzk5Mzc3ZDk1XkEyXkFqcGc@._V1_.jpg" alt="Dragon Ball Super">
+                    <div class="series-info">
+                        <h3>Dragon Ball Super (2015-2018)</h3>
+                        <p>La historia canónica que sigue a los eventos de la saga de Majin Buu.</p>
+                    </div>
+                </div>
+            </a>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Dragon Ball Universe Fan Site. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>```
+
+### **¿Qué hemos hecho?**
+
+1.  **Envolvimos cada serie:** Cada bloque que empieza con `<div class="series-item">` ahora está dentro de una etiqueta `<a href="..." class="card-link">`.
+2.  **Añadimos `href`:** He puesto enlaces de ejemplo como `dragon-ball-classic.html` o `dragon-ball-z.html`. **Tendrás que crear estas páginas HTML** para que los enlaces funcionen y lleven a algún sitio.
+3.  **Usamos `class="card-link"`:** Esta clase es importante porque utiliza la regla CSS que añadimos antes para quitar el subrayado y hacer que el enlace se comporte y se vea como el resto del bloque, manteniendo el diseño intacto.
+
+Ahora, cuando abras la página `anime.html`, el cursor se convertirá en una mano al pasar sobre cualquiera de las series y, al hacer clic, te intentará llevar a la página que hayas especificado en el `href`.

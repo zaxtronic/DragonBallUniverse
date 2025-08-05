@@ -1,0 +1,283 @@
+/* --- VARIABLES Y ESTILOS GLOBALES --- */
+:root {
+    --color-primario: #F39C12; /* Naranja del Gi de Goku */
+    --color-acento: #3498DB;    /* Azul de la ropa de Vegeta/Goku */
+    --color-fondo: #0D1B2A;     /* Azul noche/espacio profundo */
+    --color-superficie: #1B263B;/* Color para las tarjetas y elementos */
+    --color-texto: #EAEAEA;
+    --color-texto-secundario: #BDC3C7;
+    --fuente-titulo-impacto: 'Teko', sans-serif; /* Fuente audaz para títulos */
+    --fuente-cuerpo: 'Roboto', sans-serif;
+}
+
+/* Importación de fuentes de Google */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-cuerpo);
+    margin: 0;
+    background-color: var(--color-fondo);
+    background-image: radial-gradient(circle, hsl(215, 60%, 15%), var(--color-fondo) 70%);
+    color: var(--color-texto);
+    overflow-x: hidden;
+}
+
+/* --- ESTILO GLOBAL PARA ENLACES (LA SOLUCIÓN PRINCIPAL) --- */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* --- HEADER Y NAVEGACIÓN --- */
+header {
+    background: rgba(13, 27, 42, 0.8);
+    backdrop-filter: blur(8px);
+    padding: 1rem 2rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(243, 156, 18, 0.2);
+}
+
+header h1 {
+    font-family: var(--fuente-titulo-impacto);
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--color-primario);
+    margin: 0;
+    text-shadow: 0 0 8px rgba(243, 156, 18, 0.7);
+    transition: text-shadow 0.3s ease;
+}
+
+header h1:hover {
+    text-shadow: 0 0 15px var(--color-primario);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: var(--color-texto-secundario);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    color: var(--color-fondo);
+    background-color: var(--color-primario);
+}
+
+/* --- SECCIÓN HERO --- */
+.hero {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    padding: 2rem;
+    background: linear-gradient(0deg, var(--color-fondo) 5%, transparent 50%), url('https://via.placeholder.com/1600x900.png?text=Campo+de+Batalla') no-repeat center center/cover;
+    animation: backgroundPan 30s linear infinite alternate;
+}
+
+@keyframes backgroundPan {
+    from { background-position: 0% center; }
+    to { background-position: 100% center; }
+}
+
+.hero h2 {
+    font-family: var(--fuente-titulo-impacto);
+    font-size: clamp(2.5rem, 10vw, 5rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* --- TÍTULOS DE SECCIÓN --- */
+main {
+    padding: 2rem 4%;
+}
+
+main h2 {
+    font-family: var(--fuente-titulo-impacto);
+    font-size: 2.5rem;
+    color: var(--color-texto);
+    margin-bottom: 2rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* --- DISEÑO DE TARJETAS DE PÓSTER (PÁGINA PRINCIPAL, PELÍCULAS) --- */
+.card-container, .movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card, .movie-poster {
+    background-color: var(--color-superficie);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid transparent;
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+    height: 100%; /* Asegura que todas las tarjetas tengan la misma altura */
+    display: flex;
+    flex-direction: column;
+}
+
+.card .img-container, .movie-poster .img-container {
+    overflow: hidden;
+}
+
+.card img, .movie-poster img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.card-content {
+    padding: 20px;
+    flex-grow: 1; /* Permite que el contenido crezca y empuje el footer */
+}
+
+.movie-poster-title {
+     padding: 20px;
+}
+
+.card h4, .movie-poster p {
+    margin: 0 0 10px 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-primario);
+}
+
+.card p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--color-texto-secundario);
+    line-height: 1.5;
+}
+
+.card-link:hover .card, 
+.card-link:hover .movie-poster {
+    transform: translateY(-12px) scale(1.03);
+    border-color: var(--color-acento);
+    box-shadow: 0 0 20px -5px var(--color-acento), 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.card-link:hover img {
+    transform: scale(1.1);
+}
+
+/* --- DISEÑO DE LISTA DE SERIES (PÁGINA DE ANIME) --- */
+.series-item {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-superficie);
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.series-item img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+    opacity: 0.9;
+    transition: opacity 0.3s ease, transform 0.4s ease;
+}
+
+.series-info {
+    padding: 25px 30px;
+}
+
+.series-info h3 {
+    text-align: left;
+    margin: 0 0 10px 0;
+    font-size: 2.2rem;
+    color: var(--color-primario);
+    transition: color 0.3s ease;
+    font-family: var(--fuente-titulo-impacto);
+}
+
+.series-info p {
+    text-align: left;
+    margin: 0;
+    color: var(--color-texto-secundario);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.card-link:hover .series-item {
+    transform: translateY(-8px);
+    background-color: hsl(212, 33%, 20%);
+    box-shadow: 0 0 25px -5px var(--color-acento);
+}
+
+.card-link:hover .series-item img {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.card-link:hover .series-info h3 {
+    color: var(--color-acento);
+}
+
+/* --- SECCIÓN DE EXTRAS --- */
+.extra-item {
+    background-color: var(--color-superficie);
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--color-acento);
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #081018;
+    color: #666;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(243, 156, 18, 0.2);
+}
+
+/* --- Media Queries para Responsive Design --- */
+@media (min-width: 768px) {
+    .series-item {
+        flex-direction: row;
+    }
+
+    .series-item img {
+        width: 250px;
+        height: auto;
+        border-radius: 12px 0 0 12px;
+    }
+}

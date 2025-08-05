@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 1. CAMBIA EL TÍTULO PARA CADA EPISODIO -->
+    <title>Episodio 01: El secreto de la Esfera del Dragón - Dragon Ball Universe</title>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ====================================================== */
+        /* === ESTILOS ESPECÍFICOS PARA LA PÁGINA DEL EPISODIO === */
+        /* ====================================================== */
+
+        .video-player-wrapper { max-width: 1200px; margin: 2rem auto; padding: 0 2rem; }
+        .episode-title-header { text-align: center; margin-bottom: 2rem; }
+        .episode-title-header h2 { font-family: var(--fuente-titulo-impacto); font-size: 2.5rem; color: var(--color-texto); }
+        
+        /* Contenedor responsivo para el iframe */
+        .video-player {
+            position: relative;
+            padding-bottom: 56.25%; /* Proporción 16:9 */
+            height: 0;
+            overflow: hidden;
+            background-color: #000;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        /* NUEVO: Estilo para que el iframe de Odysee ocupe todo el espacio */
+        .video-player iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0; /* Quita cualquier borde feo */
+        }
+
+        .episode-navigation { display: flex; justify-content: space-between; margin-top: 2rem; }
+        .nav-button { background-color: var(--color-superficie); color: var(--color-texto-secundario); padding: 12px 25px; text-decoration: none; font-weight: bold; border-radius: 8px; border: 2px solid transparent; transition: all 0.3s ease; }
+        .nav-button:hover { background-color: var(--color-primario); color: var(--color-fondo); border-color: var(--color-primario); }
+        .nav-button.disabled { background-color: #1B263B; color: #555; pointer-events: none; }
+    </style>
+</head>
+<body class="saga-background">
+    
+    <header>
+        <h1>Dragon Ball Universe</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="anime.html">Anime</a></li>
+                <li><a href="peliculas.html">Películas</a></li>
+                <li><a href="extras.html">Extras</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="video-player-wrapper">
+            <div class="episode-title-header">
+                <!-- 2. CAMBIA EL TÍTULO DEL EPISODIO -->
+                <h2>Episodio 1: El secreto de la Esfera del Dragón</h2>
+            </div>
+    
+            <div class="video-player">
+                
+                <!-- 3. PEGA AQUÍ EL CÓDIGO <iframe> QUE COPIASTE DE ODYSEE -->
+                <iframe 
+                    id="odysee-iframe" 
+                    width="560" 
+                    height="420" 
+                    src="https://odysee.com/$/embed/-A-C--Dragon-Ball---001--DVDRip-480p---Multi-Audio---Multi-Subs---FF298771-/a0d69a32d293c8c654afffe53e761c1267901e5c" 
+                    allowfullscreen>
+                </iframe>
+                
+            </div>
+
+            <div class="episode-navigation">
+                <!-- 4. AJUSTA LOS ENLACES DE NAVEGACIÓN -->
+                <a href="#" class="nav-button disabled">← Capítulo Anterior</a>
+                <a href="episode-02.html" class="nav-button">Capítulo Siguiente →</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Dragon Ball Universe Fan Site. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Saga de Pilaf - Dragon Ball Universe</title>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ================================================= */
+        /* === ESTILOS ESPECÍFICOS PARA LA PÁGINA DE SAGA === */
+        /* ================================================= */
+
+        body.saga-background { background-size: cover; background-attachment: fixed; background-position: center; }
+        body.saga-background::before { content: ''; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(13, 27, 42, 0.85); z-index: -1; }
+        .saga-header { text-align: center; padding: 4rem 2rem 2rem; }
+        .saga-header h2 { font-size: clamp(3rem, 12vw, 6rem); color: var(--color-primario); text-shadow: 0 0 15px var(--color-primario); }
+        .saga-header p { font-size: 1.2rem; color: var(--color-texto-secundario); max-width: 700px; margin: 1rem auto 0; }
+        .saga-meta-grid { display: grid; grid-template-columns: 1fr; gap: 30px; padding: 2rem 5%; }
+        @media (min-width: 992px) { .saga-meta-grid { grid-template-columns: 1fr 2fr; } }
+        .key-info, .character-showcase { background-color: var(--color-superficie); padding: 25px; border-radius: 12px; }
+        .key-info h3, .character-showcase h3 { margin-top: 0; font-family: var(--fuente-titulo-impacto); font-size: 1.8rem; color: var(--color-acento); border-bottom: 2px solid var(--color-acento); padding-bottom: 10px; margin-bottom: 20px; }
+        .info-item { display: flex; justify-content: space-between; margin-bottom: 15px; font-size: 1.1rem; }
+        .info-item strong { color: var(--color-texto); }
+        .char-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+        .char-portrait { text-align: center; }
+        .char-portrait img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid var(--color-superficie); box-shadow: 0 0 10px rgba(0,0,0,0.5); transition: transform 0.3s ease; }
+        .char-portrait img:hover { transform: scale(1.1); }
+        .char-portrait p { margin-top: 8px; font-weight: 500; }
+        .episode-list-container { padding: 2rem 5%; }
+        .episode-list-container h3 { font-family: var(--fuente-titulo-impacto); font-size: 2.5rem; color: var(--color-texto); text-align: center; margin-bottom: 2rem; }
+        .episode-item { display: flex; align-items: center; gap: 20px; background-color: var(--color-superficie); padding: 15px 25px; border-radius: 8px; margin-bottom: 10px; transition: all 0.3s ease; }
+        .episode-item:hover { background-color: var(--color-primario); color: var(--color-fondo); transform: scale(1.02); cursor: pointer; }
+        .ep-number { font-family: var(--fuente-titulo-impacto); font-size: 2rem; color: var(--color-acento); }
+        .ep-title { font-size: 1.1rem; font-weight: 500; }
+    </style>
+</head>
+
+<body class="saga-background" style="background-image: url('imagenes/fondo-saga-pilaf.jpg');">
+    
+    <header>
+        <!-- El header no cambia -->
+        <h1>Dragon Ball Universe</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="anime.html">Anime</a></li>
+                <li><a href="peliculas.html">Películas</a></li>
+                <li><a href="extras.html">Extras</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Las secciones del header y meta-grid no cambian -->
+        <section class="saga-header">
+            <h2>Saga de Pilaf</h2>
+            <p>La aventura que lo inició todo. Goku y Bulma comienzan su viaje en busca de las legendarias Esferas del Dragón, encontrando amigos y enemigos en el camino.</p>
+        </section>
+        <section class="saga-meta-grid">
+            <div class="key-info">
+                <h3>Información</h3>
+                <div class="info-item"><span>Episodios:</span> <strong>1-13</strong></div>
+                <div class="info-item"><span>Villano Principal:</span> <strong>Emperador Pilaf</strong></div>
+                <div class="info-item"><span>Nuevos Aliados:</span> <strong>Bulma, Oolong, Yamcha</strong></div>
+            </div>
+            <div class="character-showcase">
+                <h3>Personajes Clave</h3>
+                <div class="char-grid">
+                    <div class="char-portrait"><img src="https://upload-os-bbs.hoyolab.com/upload/2024/02/11/23931197/8ae79f676ef64f9b301916e1ab13afd3_8652724362563325222.jpg?x-oss-process=image%2Fresize%2Cs_1000%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp%2Fquality%2Cq_70" alt="Goku niño"><p>Goku</p></div>
+                    <div class="char-portrait"><img src="https://i.blogs.es/973b14/bulma-dragon-ball-diseno-descartado-akira-toriyama/1366_2000.jpeg" alt="Bulma"><p>Bulma</p></div>
+                    <div class="char-portrait"><img src="https://static.wikia.nocookie.net/dragonball/images/6/6a/Emperor_Pilaf_DB_Ep_32_002.png/revision/latest?cb=20241214224943" alt="Pilaf"><p>Pilaf</p></div>
+                    <div class="char-portrait"><img src="https://preview.redd.it/ls-studio-bandit-yamcha-v0-zhl2zhjlcmaf1.png?width=498&format=png&auto=webp&s=0b0e0927ee4bd94812d1d34db99f94b191d08cd2" alt="Yamcha"><p>Yamcha</p></div>
+                    <div class="char-portrait"><img src="https://static.wikia.nocookie.net/dragonball/images/7/79/OolongWMATEp17.png/revision/latest/scale-to-width-down/1200?cb=20241219021741" alt="Oolong"><p>Oolong</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======== ZONA DE EPISODIOS CORREGIDA CON ENLACES ======== -->
+        <section class="episode-list-container">
+            <h3>Episodios</h3>
+
+            <!-- CORRECCIÓN: Se envuelve cada episodio en un enlace <a> -->
+            <a href="episode-01db.html" class="card-link">
+                <div class="episode-item">
+                    <span class="ep-number">01</span>
+                    <span class="ep-title">El secreto de la Esfera del Dragón</span>
+                </div>
+            </a>
+
+            <a href="episode-02db.html" class="card-link">
+                <div class="episode-item">
+                    <span class="ep-number">02</span>
+                    <span class="ep-title">La búsqueda del emperador</span>
+                </div>
+            </a>
+
+            <a href="episode-03db.html" class="card-link">
+                <div class="episode-item">
+                    <span class="ep-number">03</span>
+                    <span class="ep-title">La nube voladora de Roshi</span>
+                </div>
+            </a>
+            
+            <!-- ... añade el resto de enlaces a los episodios aquí ... -->
+
+        </section>
+        <!-- ======== FIN DE LA ZONA CORREGIDA ======== -->
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Dragon Ball Universe Fan Site. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
